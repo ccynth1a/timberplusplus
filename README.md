@@ -82,7 +82,7 @@ Other than that, this is a very simple logger library that works relatively simi
  
  ## Configuration
  
- The Logger class contains members that control the eventual output of any call to the LOG() macro.
+ The Logger class contains members that control the eventual output of any call to the log member function.
  
  By default, all features are enabled, so if you just want every single bit of relevant information, skip configuring the library.
  
