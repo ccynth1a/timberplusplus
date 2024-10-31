@@ -57,7 +57,7 @@ Other than that, this is a very simple logger library that works relatively simi
  
  int main()
  {
- 	timber = new Logger(Logger::DEBUG, NULL);
+    timber = new Logger(Logger::DEBUG, NULL);
     timber->log(Logger::DEBUG, "Example Message");
     delete timber;
     timber = NULL;
