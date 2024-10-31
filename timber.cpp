@@ -6,7 +6,7 @@
 
 // DESC: Returns the ANSI color code of the color type
 // NOTE: this was implemented to make editing the logger configuration less confusing on the user end. Future Charlotte: yes, i do in fact know that strncpy exists
-static const char *_get_color_code(color_t color) 
+const char *Logger::_get_color_code(color_t color) 
 {
 	switch (color) {
 		case COLOR_GREEN: return "\033[32m";
@@ -99,9 +99,9 @@ void Logger::log(const enum Levels level, const char *msg,
   if (this->stream != stdout) {
     fprintf(this->stream, "—————————————————————\n%s\n[%s]: %s\n—————————————————————\n", optional_output, levels[level], msg);
   } else {
-    fprintf(this->stream, "%s—————————————————————\n%s\n[%s]: %s\n—————————————————————\n", _get_color_code(this->output_colors[level]), optional_output, levels[level], msg);
+    fprintf(this->stream, "%s—————————————————————\n%s\n[%s]: %s\n—————————————————————\n", this->_get_color_code(this->output_colors[level]), optional_output, levels[level], msg);
     //Reset colors 
-    fprintf(this->stream, "%s", _get_color_code(ANSI_RESET));
+    fprintf(this->stream, "%s", this->_get_color_code(ANSI_RESET));
   }
 }
     

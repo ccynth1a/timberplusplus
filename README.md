@@ -1,4 +1,4 @@
-# timber++ v1.0
+# timber++ v1.0.1
  
  ## Intro
  
@@ -57,8 +57,8 @@ Other than that, this is a very simple logger library that works relatively simi
  
  int main()
  {
- 	timber = new Logger(DEBUG, NULL);
-    timber->log(DEBUG, "Example Message");
+ 	timber = new Logger(Logger::DEBUG, NULL);
+    timber->log(Logger::DEBUG, "Example Message");
     delete timber;
     timber = NULL;
  }
@@ -103,6 +103,8 @@ Other than that, this is a very simple logger library that works relatively simi
  - COLOR_MAGENTA
  - COLOR_CYAN
  - COLOR_RED
+ 
+ Said colors are contained in the same namespace to prevent conflicts with your own values
  
  ## Contact Me
  
