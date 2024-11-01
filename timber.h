@@ -5,14 +5,6 @@
 #include <stddef.h>
 #include <stdio.h>
 
-enum Levels {
-  DEBUG,
-  INFO,
-  WARN,
-  ERROR,
-  CRITICAL,	
-};
-
 class Logger {
 public:
   typedef enum {
@@ -25,6 +17,14 @@ public:
     COLOR_RED,
     ANSI_RESET,
   } color_t;
+  
+  enum Levels {
+    DEBUG,
+    INFO,
+    WARN,
+    ERROR,
+    CRITICAL,	
+  };
 
   int min_level;
   FILE* stream;
