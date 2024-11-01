@@ -6,7 +6,7 @@
 
 // DESC: Returns the ANSI color code of the color type
 // NOTE: this was implemented to make editing the logger configuration less confusing on the user end. Future Charlotte: yes, i do in fact know that strncpy exists
-const char *Logger::_get_color_code(color_t color) 
+const char *Timber::_get_color_code(color_t color) 
 {
 	switch (color) {
 		case COLOR_GREEN: return "\033[32m";
@@ -21,7 +21,7 @@ const char *Logger::_get_color_code(color_t color)
 }
 
 // Constructor
-Logger::Logger(const enum Levels min_level, const char *file_name)
+Timber::Timber(const enum Levels min_level, const char *file_name)
 {
   if (this == NULL) {
     this->err("NULL Logger Pointer");
@@ -54,7 +54,7 @@ Logger::Logger(const enum Levels min_level, const char *file_name)
   }
 }
   
-void Logger::log(const enum Levels level, const char *msg,
+void Timber::log(const enum Levels level, const char *msg,
          const char *func,
          int line)
 {
@@ -106,12 +106,12 @@ void Logger::log(const enum Levels level, const char *msg,
 }
     
 // Destructor
-Logger::~Logger() 
+Timber::~Timber() 
 {
   if (this->stream != NULL) {fclose(this->stream);}
 }
 
-void Logger::err(const char *msg)
+void Timber::err(const char *msg)
 {
   fprintf(stderr, "[LOG ERROR]: %s\n", msg);
 }

@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdio.h>
 
-class Logger {
+class Timber {
 public:
   typedef enum {
     COLOR_RESET,
@@ -33,9 +33,9 @@ public:
   bool function_enabled;
   color_t output_colors[5];
   
-  Logger(const enum Levels min_level, const char *file_name);
+  Timber(const enum Levels min_level, const char *file_name);
 
-  ~Logger();
+  ~Timber();
 
   void kill();
   
