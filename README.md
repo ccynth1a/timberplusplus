@@ -5,6 +5,8 @@
 This is a port of my timber logging library to C++. Obviously since its C -> C++, the conversion was quite simple, but as I'm unfamiliar with the language in general, there's a high chance that I've encountered the dreaded "undefined behaviour". Please if you encounter these issues, contact me.
 
 Other than that, this is a very simple logger library that works relatively similar to how Python's does, since that language has the best standard library logger in all languages. This project will be updated sporadically, and may not always be in line with the most up to date version of timber (C). Timber is also my first time ever writing a library, so please forgive the shoddy code.
+
+**IF YOU CAN TOLERATE NOT USING AN OOP STYLE, USE THE C VERSION OF THIS PROJECT INSTEAD, IT IS SIGNIFICANTLY BETTER. THIS REPO EXISTS PURELY TO ADHERE TO THE "CPP" STYLE OF WORKING**
  
  ## Index
  
