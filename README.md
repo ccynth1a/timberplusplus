@@ -42,6 +42,8 @@ Other than that, this is a very simple logger library that works relatively simi
  - Any time a LOG_ERROR occurs, this is your fault, if it's something I've done wrong, the program will crash. Check that your values when calling a function are within the expected ranges
  
  - When writing to a filestream that is not stdout, colors cannot be printed
+
+ - Due to variadic arguments overwriting the default arguments in the log() function, I sadly have not figured out a way to implement format strings as is present in the C version of timber. If you have any idea, please just send a PR and I will immediately merge it
  
  ## Examples
  
